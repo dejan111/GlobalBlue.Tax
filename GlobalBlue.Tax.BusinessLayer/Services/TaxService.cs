@@ -10,18 +10,24 @@ public class TaxService : ITaxService
         {
             CalculateNetAmount(tax);
             CalculateVatAmount(tax);
+
+            return;
         }
 
         if (tax.NetAmount != null)
         {
             CalculateGrossAmount(tax);
             CalculateVatAmount(tax);
+
+            return;
         }
 
         if (tax.VatAmount != null)
         {
             CalculateGrossAmount(tax);
             CalculateNetAmount(tax);
+
+            return;
         }
     }
 
